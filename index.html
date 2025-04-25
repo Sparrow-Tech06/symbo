@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no,viewport-fit=cover">
+   
+  <title> Symbo - Learn Symbols & Play Quizzes </title>
+  <meta name="description" content="Symbo is a fun and educational app to explore punctuation, mathematical signs, special characters & keyboard symbols with quizzes and detailed guides.">
+
+  <meta property="og:title" content="Symbo - Learn Symbols & Play Quizzes">
+<meta property="og:description" content="Symbo is a fun and educational app to explore punctuation, mathematical signs, special characters & keyboard symbols with quizzes and detailed guides.">
+
+
+  <!-- Bootstrap Css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!--Font Family-->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+  <style>
+
+:root {
+     
+      --background-color: #ffffff;
+      --text-color: #000000;
+      --accent : #6f42c1;
+      
+      --card-radius: 10px;
+      --max-width: 660px;
+      --shadow: 0 4px 10px rgba(0,0,0,0.1) ;
+
+      --list-item-bg: #efe8fa;
+      --list-item-hover-bg: #dfd5f0;
+      --social-icon-bg: #ffffff;
+
+      --toggle-icon-filter: invert(1) ;
+      --close-btn-filter: invert(0);
+
+      --task-card-1: #7b90f4;
+      --task-card-2: #f681f4;
+      --task-card-3: #f4a261;
+      --task-card-4: #6dfcc4;
+      --task-card-5: #d084ff;
+      --task-card-6: #7b90f4;
+
+    }
+
+    @media (prefers-color-scheme: dark) {
+         :root {
+            --background-color: #1e1b2e;
+            --text-color: #ffffff;
+            --accent: #7c4dff;
+        
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+            --list-item-bg: #2c2442;
+            --list-item-hover-bg: #4a5568;
+            --social-icon-bg: #475569;
+
+            --toggle-icon-filter: invert(1);
+            --close-btn-filter: invert(1);    
+
+            --task-card-1: #8FD14F;
+            --task-card-2: #BBD8A3;
+            --task-card-3: #f4a261;
+            --task-card-4: #AC87C5;
+            --task-card-5: #A594F9;
+            --task-card-6: #E69DB8;
+
+          }
+      }
+
+/********************************************************/
+    html {
+       font-size: 15px;
+       scroll-behavior: smooth;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        user-select: none;
+        line-height: 1.5;
+    }
+
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      font-family: "Open Sans", system-ui;
+      margin: 0;
+    }
+
+    a {
+      text-decoration: none;
+      underline: none !important;
+    }
+
+  /***************************************************/  
+    .container {
+      max-width: 660px;
+    }
+
+  .navbar {
+            background-color: var(--accent);
+            color: #ffffff;
+        }
+        .offcanvas {
+            background-color: var(--background-color);
+        }
+
+        .nav-link {
+            color: var(--text-color);
+        }
+
+        .navbar-toggler-icon {
+            -webkit-filter: var(--toggle-icon-filter);
+                    filter: var(--toggle-icon-filter);
+            border: none;
+        }
+        .navbar-toggler {
+            border: none;
+            padding: 0.2rem;
+        }
+
+         .navbar-brand {
+            color: #ffffff;
+            font-weight: 600;
+        } 
+        .navbar-brand:hover {
+            color: #ffffff;
+        } 
+
+      /*  .navbar-brand, */ .offcanvas-title {
+            color: var(--text-color);
+        } 
+        
+        .btn-close {
+            -webkit-filter: var(--close-btn-filter);
+                    filter: var(--close-btn-filter);
+        }
+
+        .list-group-item {
+            border: none;
+            padding: 15px;
+            font-size: 1rem;
+            background: var(--list-item-bg);
+            margin-bottom: 10px;
+            border-radius: 10px;
+            -webkit-transition: background 0.3s ease;
+            -o-transition: background 0.3s ease;
+            transition: background 0.3s ease;
+        }
+
+        .list-group-item a {
+            text-decoration: none;
+            color: var(--text-color);
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+        }
+
+        .list-group-item:hover {
+            background-color: var(--list-item-hover-bg);
+        }  
+
+    /*********************************************************/
+    
+       .social-icons {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: white;
+            width: 35px;
+            height: 35px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            border-radius: 50%;
+            -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .follow { color : var(--text-color); }
+
+        .telegram { background: #0088cc; }
+        .whatsapp { background: #25d366; }
+        .instagram { background: -o-linear-gradient(45deg, #fd5949, #d6249f, #285AEB); 
+                     background: linear-gradient(45deg, #fd5949, #d6249f, #285AEB);    }    
+      
+    /******************************************************/    
+    .task-card {
+      border-radius: 20px;
+      padding: 20px 10px;
+      color: #fff;
+      text-align: center;
+      font-weight: 600;
+      text-decoration: none;
+      display: block;
+      box-shadow: var(--shadow);
+    }
+    .task-img {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 10px;
+      display: block;
+      aspect-ratio: 2 / 2;
+    }
+    .task-title {
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+
+
+  </style>
+</head>
+<body oncontextmenu="return false">
+
+      
+      <!--------------------------------------------------------------------------------------
+     ---------------------------------This Is Header Section--------------------------------
+     --------------------------------------------------------------------------------------->
+    <nav class="navbar navbar-light sticky-top shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" onclick="location.reload(); return false;"> Symbo </a>
+            <button class="navbar-toggler d-block" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" id="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title"> Symbo - Learn Symbols </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                          <a href="privacy-policy.html"><span><i class="bi bi-shield-lock me-2"></i> Privacy Policy </span> <i class="bi bi-chevron-right"></i> </a>
+                      </li>
+                      <li class="list-group-item">
+                          <a href="terms-conditions.html"><span><i class="bi bi-file-earmark-text me-2"></i> Terms of Service </span> <i class="bi bi-chevron-right"> </i></a>
+                      </li>
+                      <li class="list-group-item">
+                          <a href="https://wa.me/917430971730"><span><i class="bi bi-question-circle me-2"></i> Help & Support </span> <i class="bi bi-chevron-right"></i></a>
+                     </li>
+                  </ul>
+
+                    <!-- Follow Us Section 
+                    <div class="text-center mt-4">
+                        <h6 style="color: var(--text-color);"> Follow Us On </h6>
+                        <div class="social-icons">
+                            <a href="https://t.me/SparrowTech06" class="telegram"><i class="bi bi-telegram"></i></a>
+                            <a href="https://whatsapp.com/channel/0029Vb4W8AyKLaHsnHSOjz2t" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
+                        </div>
+                    </div>-->
+                    
+                </div>
+            </div>
+        </div>
+     </nav>
+
+
+
+  <div class="container py-4 mt-4">
+    <div class="row g-3">
+
+      <!-- Complete Captcha 
+      <div class="col-12">
+        <a href="#" class="task-card" style="background-color:var(--task-card-1);">
+          <img src="assect/quiz.png" class="task-img" loading="lazy" draggable="false" />
+          <div class="task-title"> Play Symbol Quiz </div>
+        </a>
+      </div>-->
+
+      <!-- Daily Rewards -->
+      <div class="col-6">
+        <a href="Punctuation.html" class="task-card" style="background-color:var(--task-card-2);">
+          <img src="assect/hashtag.png" class="task-img" loading="lazy" draggable="false" />
+          <div class="task-title"> Punctuation </div>
+        </a>
+      </div>
+
+      <!-- Promo Code -->
+      <div class="col-6">
+        <a href="Mathematical.html" class="task-card" style="background-color:var(--task-card-3);">
+          <img src="assect/percentage.png" class="task-img" loading="lazy" draggable="false" />
+          <div class="task-title"> Mathematical </div>
+        </a>
+      </div>
+
+      <!-- Spin & Win -->
+      <div class="col-6">
+        <a href="Special-char.html" class="task-card" style="background-color:var(--task-card-4);">
+          <img src="assect/at.png" class="task-img" loading="lazy" draggable="false" />
+          <div class="task-title"> Special Characters </div>
+        </a>
+      </div>
+
+      <!-- Scratch Card -->
+      <div class="col-6">
+        <a href="Keyboard-sys.html" class="task-card" style="background-color:var(--task-card-5);">
+          <img src="assect/weight.png" class="task-img" loading="lazy" draggable="false" />
+          <div class="task-title"> Unit & Measurement </div>
+        </a>
+      </div>
+
+
+      <!-- Complete Captcha 
+      <div class="col-12">
+        <a href="#" class="task-card" style="background-color:var(--task-card-6);">
+          <img src="assect/telegram.png" class="task-img" loading="lazy" draggable="false" />
+          <div class="task-title"> Join Our Telegram </div>
+        </a>
+      </div>-->
+
+    </div>
+  </div>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+
+  <script src="version-check.js"> </script>
+
+
+</body>
+</html>

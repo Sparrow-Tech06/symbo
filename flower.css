@@ -1,0 +1,145 @@
+
+    :root {
+      --bg-color: #f8f9fa;
+      --text-color: #000000;
+
+      --card-bg: #ffffff;
+      --border-color: #e9ecef;
+
+      --accent : #6f42c1;
+    }
+
+  @media (prefers-color-scheme: dark) {
+         :root { 
+             --bg-color: #1e1b2e;
+             --text-color: #ffffff;
+
+             --card-bg: #2c2442;
+             --border-color: #4158A6;
+
+             --accent: #7c4dff;
+         }
+      }  
+
+/************************************************/
+    
+    html {
+       font-size: 15px;
+       scroll-behavior: smooth;
+       line-height: 1.5;
+    }
+    body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background 0.3s, color 0.3s;
+            font-family: "Open Sans", system-ui;
+            -webkit-user-select: none;
+               -moz-user-select: none;
+                -ms-user-select: none;
+                    user-select: none;
+            margin:0 ;
+            padding: 0;
+            -webkit-box-sizing:border-box;
+                    box-sizing:border-box;
+            text-transform: capitalize;
+        }
+
+         * {
+            font-family: "Open Sans", system-ui;
+            -webkit-user-select:none;
+               -moz-user-select:none;
+                -ms-user-select:none;
+                    user-select:none;
+            margin:0;
+            padding:0;
+            -webkit-box-sizing:border-box;
+                    box-sizing:border-box;     
+            user-select:none;
+            scrollbar-width: none; /* Firefox */
+           -ms-overflow-style: none; /* Internet Explorer and Edge */
+           text-transform: capitalize;
+        }
+         *::-webkit-scrollbar {
+           display: none; /* Chrome, Safari, and Opera */
+         }
+
+  /********************************************/  
+
+    .container {
+      max-width: 660px;
+    }
+
+    .navbar {
+            background-color: var(--accent);
+            color: #ffffff;
+            padding: 12px 0px;
+    }
+
+    .navbar-brand {
+         color: #ffffff;
+    }
+
+    .navbar button {
+        padding : 2px 8px;
+    }
+
+    /************** Slimmer cards ****************/
+    .card {
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+      background-color: var(--card-bg);
+      color: var(--text-color);
+    }
+
+    .symbol-box {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: bold;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+    
+    /* Loading Animation */
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    .skeleton {
+      background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.5s infinite;
+      border-radius: 4px;
+    }
+    .skeleton-text {
+      height: 14px;
+      margin-bottom: 8px;
+    }
+
+
+    button .small {
+        color: #C3FF93;
+    }
+
+    /************** Slim hr ************/
+    hr {
+      opacity: 0.3;
+      margin: 12px 0;
+    }
+    ul li {
+      font-size: 13px;
+      margin-left: 10px;
+    }
+
+  /*********************** Reload Button *********************/
+   .reload {
+      border: none;
+      padding: 8px 20px;
+      border-radius: 30px;
+      background-color: var(--accent);
+      color: #ffffff;
+   }  
