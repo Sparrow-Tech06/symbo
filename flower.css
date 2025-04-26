@@ -122,9 +122,8 @@
       margin-bottom: 8px;
     }
 
-
     button .small {
-        color: #C3FF93;
+        color: var(--drop-down-btn);
     }
 
     /************** Slim hr ************/
